@@ -1,0 +1,13 @@
+Feedback on Computers and Programming II Programming Assignment: Quadtree
+
+Code:
+The code compiled successfully. Test runs executed cleanly with correct output for a variety of input images. 
+
+The code was well layed out. Function headers all contained a useful comment section describing purpose of function and input and output parameters, however, it would be helpful to include a more explicit list of parameters within the comment header. The code was annotated with some comments, although in complex areas of the code, you might include more comments to explain the behaviour of particular lines of code.  Code was modularised sensibly into self-contained functions responsible for separate tasks - make sure you choose function names to describe accurately the functionality of the function, for example your ReadFile function creates an image. Variables were named well, and had correct scope being defined at the proper level, and you were able to avoid using any unnecessary global variables. Error-handling was generally good - for example, you checked all return values from fopen calls; make sure you check return values from every malloc call. The algorithm itself worked correctly to create a correct quadtree, and it was generally efficiently coded in terms of performance and memory usage; however, your SetNode function creates a copy of a quadrant of the image: this is unnecessary as you could pass locations of quadrant into your recursive functions thereby reading data directly from the original copy of the image you made. Also, in your CheckColour function you could exit the loops as soon as you have determined that there is both a black and white pixel, as the quadrant must therefore be grey. Finally don't forget to free all the memory you have allocated before exiting the program.
+
+Report:
+The presentation of the report was excellent. The report was organised in a sensible structure with numbered sections, with the inclusion of a title page, contents and an abstract. The design was described in detail, and the structure diagram was very clear and illustrated the design well. Results were presented clearly, including a description of the error-handling. The background and conclusions section put the quadtree algorithm in real context.
+
+An excellent piece of work!
+
+Mark:  94%
